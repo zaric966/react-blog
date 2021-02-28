@@ -1,0 +1,9 @@
+.logo {
+    height: 32px;
+    background: rgba(255, 255, 255, 0.2);
+    margin: 16px;
+    color: #f3f3f3;
+    font-size: medium;
+    text-align: center;
+    vertical-align: center;
+}
