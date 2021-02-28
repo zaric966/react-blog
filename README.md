@@ -10,14 +10,14 @@ a blog which is made by ant-design egg.js react.js
 #数据库
 本项目采用的是mysql数据库，共有3个简单表。如需更改配置，请到`service/config/plugin.js`中更改你个人的数据库连接方式
 1. 管理员用户表  
-`
+```
 CREATE TABLE `admin_user` (
    `userName` varchar(40) default NULL,
    `password` varchar(40) default NULL
  ) ENGINE=InnoDB DEFAULT CHARSET=gb2312
-`
+```
 2. 文章表
-`
+```
 CREATE TABLE `article` (
    `id` int(10) NOT NULL auto_increment,
    `type_id` int(10) NOT NULL,
@@ -28,9 +28,9 @@ CREATE TABLE `article` (
    `introduction` varchar(500) default NULL,
    PRIMARY KEY  (`id`)
  ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=gb2312
-`
+```
 3. 类型表
-`
+```
 CREATE TABLE `type` (
    `id` int(10) NOT NULL,
    `typeName` varchar(40) NOT NULL,
@@ -38,4 +38,4 @@ CREATE TABLE `type` (
    `icon` varchar(40) default NULL,
    PRIMARY KEY  (`id`)
  ) ENGINE=InnoDB DEFAULT CHARSET=gb2312
-`
+```
