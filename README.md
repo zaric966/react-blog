@@ -5,7 +5,7 @@ a blog which is made by ant-design egg.js react.js
 2. 整个项目均采用React Hooks来编写component，更方便，更贴近新知识。
 # 详细
 - `./blog`是博客的前端界面，其中采用了marked.js和highlight.js来支持博客正文的markdown格式显示，整体的UI架构采用的是Ant-Design,其间为了方便css的引入,同时引用了next.js进行辅助开发。  
-- `./admin`是博客的后台管理界面，为博客正文提供了增删改查功能，同样通过Ant-Design来进行快速UI搭建，并设置了路由守卫`service/app/middleware/adminauth`，以确定token存在的方式来判断是否登录。  
+- `./admin`是博客的后台管理界面，为博客正文提供了增删改查功能，同样通过Ant-Design来进行快速UI搭建，并设置了pm2路由守卫`service/app/middleware/adminauth`，以确定token存在的方式来判断是否登录。  
 - `./service`是整个博客前后台的接口支撑，采用koa的高级框架egg.js来编写，给前后端提供所有从mysql获取数据接口。  
 #数据库
 本项目采用的是mysql数据库，共有3个简单表。如需更改配置，请到`service/config/plugin.js`中更改你个人的数据库连接方式
@@ -39,3 +39,5 @@ CREATE TABLE `type` (
    PRIMARY KEY  (`id`)
  ) ENGINE=InnoDB DEFAULT CHARSET=gb2312
 ```
+# 另关于Chrome的SameSite问题
+进入chrome://flags/将SameSite的设置关闭即可获取路由守卫所需
